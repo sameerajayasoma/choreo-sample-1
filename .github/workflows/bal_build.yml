@@ -1,0 +1,23 @@
+name: Ballerina Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Ballerina
+      uses: ballerina-platform/ballerina-action@v2.0.3
+      with:
+        args:
+          build
