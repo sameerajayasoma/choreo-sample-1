@@ -1,12 +1,8 @@
-[build-options]
-  observabilityIncluded = true
-
 [package]
-  distribution = "2201.3.1"
-  export = ["sfdc_opportunity_update_to_slack"]
-  icon = "docs/icon.png"
-  keywords = ["Kind/Sample","Type/Webhook","Category/Integration"]
-  name = "sfdc_opportunity_update_to_slack"
-  org = "sam"
-  version = "3.1.0"
+org = "sameera"
+name = "myapp"
+version = "0.1.0"
+distribution = "2201.8.6"
 
+[build-options]
+observabilityIncluded = true
