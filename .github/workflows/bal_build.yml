@@ -16,7 +16,12 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Setup Ballerina
+    - name: Test package
+      uses: ballerina-platform/ballerina-action@2201.8.6
+      with:
+        args:
+          test
+    - name: test package
       uses: ballerina-platform/ballerina-action@2201.8.6
       with:
         args:
