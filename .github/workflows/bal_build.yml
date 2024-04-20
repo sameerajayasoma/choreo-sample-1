@@ -46,22 +46,22 @@ jobs:
           tags: sameerajayasoma/myapp:${{ github.sha }}
           # labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Update Builder with image details
-        uses: actions/http-client@v2.2.0
-        with:
-          url: "https://e69b-172-56-107-161.ngrok-free.app/builder/buildstatus"
-          method: POST
-          headers: |
-            Content-Type: application/json
-          body: |
-            { 
-              "status": "success",
-              "image" : {
-                  "registry": "docker.io",
-                  "repository": "sameerajayasoma/myapp",
-                  "tag": "${{ github.sha }}"
-              }
-            }
+    #   - name: Update Builder with image details
+    #     uses: actions/http-client@v2.2.0
+    #     with:
+    #       url: "https://e69b-172-56-107-161.ngrok-free.app/builder/buildstatus"
+    #       method: POST
+    #       headers: |
+    #         Content-Type: application/json
+    #       body: |
+    #         { 
+    #           "status": "success",
+    #           "image" : {
+    #               "registry": "docker.io",
+    #               "repository": "sameerajayasoma/myapp",
+    #               "tag": "${{ github.sha }}"
+    #           }
+    #         }
       - name: Update Builder with image details
         uses: fjogeleit/http-request-action@v1
         with:
