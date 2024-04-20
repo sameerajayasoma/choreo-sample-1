@@ -1,7 +1,9 @@
-import ballerina/io;
+import ballerina/http;
 
-public function main() {
-    io:println(getGreeting());
+service /hello on new http:Listener(9070) {
+    resource function get greeting() returns string{
+        return getGreeting();
+    }
 }
 
 function getGreeting() returns string {
