@@ -64,5 +64,5 @@ jobs:
           customHeaders: '{"Content-Type": "application/json"}'
           data: |
             { 
-               "status": "failure",
+               "status": "failure"
             }
