@@ -7,5 +7,5 @@ service /hello on new http:Listener(9070) {
 }
 
 function getGreeting() returns string {
-    return "Hello, World Sameera!";
+    return "Hello, World!";
 }   
